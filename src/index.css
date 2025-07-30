@@ -1,0 +1,58 @@
+/* Shine effect for Ai-assisted title */
+.shine-title {
+  position: relative;
+  overflow: hidden;
+}
+.shine-effect {
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  mix-blend-mode: screen;
+  animation: shineMove 1.5s linear infinite;
+}
+@keyframes shineMove {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(100%) skewX(-20deg);
+  }
+}
+@keyframes blinkStar {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Super Kindly";
+  src: url("/super_kindly/Super Kindly.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
